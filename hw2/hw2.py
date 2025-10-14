@@ -21,7 +21,7 @@ def get_temperature():
 
 def convert_data(row_data):
   data = []
-  while sum([1 for item in row_data["time"]]) > 0:
+  while len(row_data["time"]) > 0:
     data.append({"time": row_data["time"].pop(0), "temp": row_data["temperature_2m"].pop(0)})
   return data
 
